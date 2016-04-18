@@ -11,6 +11,11 @@
   <body>
     <div ng-controller='ToDoController as ctrl'>
       <p ng-repeat='todos in ctrl.todos'> {{todos.text}}: {{todos.completed ? 'Completed' : 'Not completed'}} </p>
+      <input type='text' ng-model='todotext' placeholder="add to do">
+      <button ng-click='ctrl.addToDo(todotext);'>Add to do </button>
+      <button ng-click='ctrl.removeToDo()'> Remove Last to do </button>
+
     </div>
+
   </body>
 </html>
