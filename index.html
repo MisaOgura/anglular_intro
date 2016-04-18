@@ -9,8 +9,8 @@
     <script src='controller.js'></script>
   </head>
   <body>
-    <div ng-controller="ToDoController as ctrl">
-      <p> {{ctrl.todo}}</p>
+    <div ng-controller='ToDoController as ctrl'>
+      <p ng-repeat='todos in ctrl.todos'> {{todos.text}}: {{todos.completed ? 'Completed' : 'Not completed'}} </p>
     </div>
   </body>
 </html>
