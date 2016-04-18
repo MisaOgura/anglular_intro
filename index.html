@@ -6,13 +6,11 @@
     <link rel= 'stylesheet' href='todo.css'>
     <script src="angular.min.js"></script>
     <script src='app.js'></script>
+    <script src='controller.js'></script>
   </head>
   <body>
-    <div>
-      <label>Name:</label>
-      <input type='text' ng-model='yourName' placeholder='Enter a name here'>
-      <hr>
-      <h1>Hello {{yourName}}</h1>
+    <div ng-controller="ToDoController as ctrl">
+      <p> {{ctrl.todo}}</p>
     </div>
   </body>
 </html>
