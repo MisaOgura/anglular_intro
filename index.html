@@ -6,12 +6,13 @@
     <link rel= 'stylesheet' href='todo.css'>
     <script src="angular.min.js"></script>
     <script src='app.js'></script>
+    <script src='todoservice.js'></script>
     <script src='controller.js'></script>
     <script src='todofactory.js'></script>
   </head>
   <body>
     <div ng-controller='ToDoController as ctrl'>
-      <p ng-repeat='todos in ctrl.todos'> {{todos.text}}: {{todos.completed ? 'Completed' : 'Not completed'}}
+      <p ng-repeat='todo in ctrl.todos'> {{todo.text}}: {{todo.completed ? 'Completed' : 'Not completed'}}
         <button ng-click='todos.complete();'>Complete </button>
       </p>
       <input type='text' ng-model='todotext' placeholder="add to do">
